@@ -4,14 +4,15 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      HelloWorld
+    }
   }
-}
+  // "serve": "vue-cli-service serve",
 </script>
 
 <style>
@@ -24,3 +25,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
