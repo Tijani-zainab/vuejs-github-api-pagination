@@ -12,7 +12,6 @@
       HelloWorld
     }
   }
-  // "serve": "vue-cli-service serve",
 </script>
 
 <style>
