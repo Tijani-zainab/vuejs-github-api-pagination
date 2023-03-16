@@ -2,6 +2,7 @@
 	import AppBanner from '@/components/shared/AppBanner';
 	import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
 	import Button from '../components/reusable/Button.vue';
+	import ProjectList from '../components/projects/ProjectList.vue';
 
 	export default {
 		// eslint-disable-next-line vue/multi-word-component-names
@@ -9,6 +10,7 @@
 		components: {
 			AppBanner,
 			ProjectsGrid,
+			ProjectList,
 			Button,
 		},
 	};
@@ -21,6 +23,7 @@
 
 		<!-- Projects -->
 		<ProjectsGrid />
+		<ProjectList />
 
 		<!-- Load more projects button -->
 		<div class="mt-10 sm:mt-20 flex justify-center">
