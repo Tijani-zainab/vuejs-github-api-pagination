@@ -24,3 +24,12 @@ If you'd like to contribute to this project, please feel free to submit a pull r
 
 #### License
 This project is licensed under the MIT License - see the LICENSE file for details
+
+#### Acknowledgments
+This project was bootstrapped with Vue CLI.
+
+[]: # Path: src/App.vue
+[]: # MIT License
+
+
+#### link to the live demo: [Live Demo Link](https://vuejs-pagination.netlify.app/)
