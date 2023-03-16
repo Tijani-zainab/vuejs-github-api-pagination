@@ -9,6 +9,7 @@ Allows users to click on a repository to view its details on GitHub
 #### Technologies Used
 Vue.js
 GitHub API
+Tailwind CSS
 
 #### Getting Started
 To run this application, you will need to have Node.js and Vue CLI installed on your system.
