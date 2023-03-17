@@ -3,13 +3,11 @@
 	import ProjectsFilter from './ProjectsFilter.vue';
 	// import ProjectSingle from './ProjectSingle.vue';
 	import ProjectList from './ProjectList.vue';
-	import projects from '../../data/projects';
 
 	export default {
 		components: { ProjectList, ProjectsFilter },
 		data: () => {
 			return {
-				projects,
 				projectsHeading: 'Projects Portfolio',
 				selectedCategory: '',
 				searchProject: '',
@@ -135,11 +133,7 @@
 		<!-- Projects grid -->
 		<div>
 			<ProjectList :projects="filteredProjects" />
-			<!-- <ProjectSingle
-				v-for="project in filteredProjects"
-				:key="project.id"
-				:project="project"
-			/> -->
+
 		</div>
 	</section>
 </template>
