@@ -26,7 +26,7 @@
 				<counter
 					ref="counter"
 					:startAmount="0"
-					:endAmount="3"
+					:endAmount="2"
 					:duration="1"
 					:autoinit="true"
 					@finished="alert(`Counting finished!`)"
@@ -45,9 +45,9 @@
 				<counter
 					ref="counter"
 					:startAmount="0"
-					:endAmount="2"
+					:endAmount="14"
 					:duration="1"
-					suffix="k+"
+					suffix="+"
 					:autoinit="true"
 					@finished="alert(`Counting finished!`)"
 					class="font-general-medium text-4xl font-bold text-secondary-dark dark:text-secondary-light mb-2"
