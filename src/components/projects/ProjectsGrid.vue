@@ -1,18 +1,18 @@
 <script>
 	import feather from 'feather-icons';
 	import ProjectsFilter from './ProjectsFilter.vue';
-	import ProjectSingle from './ProjectSingle.vue';
+	// import ProjectSingle from './ProjectSingle.vue';
+	import ProjectList from './ProjectList.vue';
 	import projects from '../../data/projects';
 
 	export default {
-		components: { ProjectSingle, ProjectsFilter },
+		components: { ProjectList, ProjectsFilter },
 		data: () => {
 			return {
 				projects,
 				projectsHeading: 'Projects Portfolio',
 				selectedCategory: '',
 				searchProject: '',
-				// repositories: []
 			};
 		},
 		computed: {
@@ -42,22 +42,9 @@
 				let project = new RegExp(this.searchProject, 'i');
 				return this.projects.filter((el) => el.title.match(project));
 			},
-
-			// Fetch repositories from github
-			// async fetchRepositories() {
-			// 	try {
-			// 		const response = await fetch('https://api.github.com/users/tijani-zainab/repos');
-			// 		const data = await response.json();
-			// 		this.repositories = data;
-			// 	} catch (error) {
-			// 		console.log(error);
-			// 	}
-		
-			// }
 		},
 		mounted() {
 			feather.replace();
-			// this.fetchRepositories();
 		},
 	};
 </script>
@@ -146,20 +133,13 @@
 		</div>
 
 		<!-- Projects grid -->
-		<div
-			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10"
-		>
-			<ProjectSingle
+		<div>
+			<ProjectList :projects="filteredProjects" />
+			<!-- <ProjectSingle
 				v-for="project in filteredProjects"
 				:key="project.id"
 				:project="project"
-			/>
-			<!-- <div class="grid">
-				<div v-for="repo in repositories" :key="repo.id">
-					<h2>{{ repo.name }}</h2>
-					<p>{{ repo.description }}</p>
-				</div>
-			</div> -->
+			/> -->
 		</div>
 	</section>
 </template>

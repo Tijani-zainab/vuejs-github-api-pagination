@@ -1,6 +1,6 @@
 <script>
+
   export default {
-    name: 'HelloWorld',
     data() {
       return {
         repos: [],
@@ -8,6 +8,7 @@
         itemsPerPage: 6,
       };
     },
+
     computed: {
       paginatedRepos() {
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;
@@ -18,33 +19,39 @@
         return Math.ceil(this.repos.length / this.itemsPerPage);
       },
     },
+
     async created() {
       const response = await fetch('https://api.github.com/users/tijani-zainab/repos');
       this.repos = await response.json();
     },
   };
+
 </script>
 
 <template>
-    <div class="container">
-      <h1>My GitHub Repositories</h1>
 
-      <div class="grid">
-        
-        <div v-for="repo in paginatedRepos" :key="repo.id" class="card">
-          <h2><a :href="repo.html_url">{{ repo.name }}</a></h2>
-          <p>{{ repo.description }}</p>
-          <p>Language: {{ repo.language }}</p>
-          <p>Stars: {{ repo.stargazers_count }}</p>
-          <!-- <a class="view--button" :href="repo.html_url" target="_blank">View on GitHub</a> -->
+    <div class="container">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <div v-for="repo in paginatedRepos" :key="repo.id" class="card shadow-md rounded-lg overflow-hidden bg-white">
+          <div class="card-body px-4 py-3">
+            <h2 class="text-xl font-bold mb-2"><a :href="repo.html_url" class="text-indigo-500 hover:underline">{{ repo.name }}</a></h2>
+            <p class="text-gray-700 mb-2">{{ repo.description }}</p>
+            <p class="text-gray-700 mb-2">Language: {{ repo.language }}</p>
+            <p class="text-gray-700 mb-2">Stars: {{ repo.stargazers_count }}</p>
+            <a :href="repo.html_url" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700 transition-colors duration-300">View on GitHub</a>
+          </div>
         </div>
+
       </div>
 
-      <div class="pagination">
-        <button v-for="page in pageCount" :key="page" @click="currentPage = page">{{ page }}</button>
+      <div class="pagination flex justify-center mt-8">
+        <button v-for="page in pageCount" :key="page" @click="currentPage = page" class="mx-2 py-2 px-4 rounded-lg text-gray-700 border border-gray-400 hover:bg-gray-200 focus:outline-none focus:shadow-outline">{{ page }}</button>
       </div>
 
     </div>
+
 </template>
   
 
@@ -58,32 +65,30 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
   }
   
   .card {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 0.5rem;
+    transition: transform 0.2s;
   }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card-body {
+    transition: background-color 0.2s;
+  }
+  
+  .card:hover .card-body {
+    background-color: #f9f9f9;
   }
   
   .pagination button {
-    margin: 0 0.5rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    border-radius: 0.5rem;
     cursor: pointer;
   }
-  
-  .pagination button:hover {
-    background-color: #ddd;
-  }
+
 </style>
-  
