@@ -113,7 +113,7 @@
 							id: 2,
 							name: 'Instagram',
 							icon: 'instagram',
-							url: 'https://instagram.com/realstoman',
+							url: 'https://instagram.com/zainab.gram',
 						},
 						{
 							id: 4,
