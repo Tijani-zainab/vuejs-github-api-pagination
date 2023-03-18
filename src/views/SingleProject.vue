@@ -1,8 +1,6 @@
 <script>
 	import feather from 'feather-icons';
 	import ProjectHeader from '../components/projects/ProjectHeader.vue';
-	import ProjectGallery from '../components/projects/ProjectGallery.vue';
-	import ProjectInfo from '../components/projects/ProjectInfo.vue';
 	import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects.vue';
 
 	export default {
@@ -10,8 +8,6 @@
 		name: 'Projects',
 		components: {
 			ProjectHeader,
-			ProjectGallery,
-			ProjectInfo,
 			ProjectRelatedProjects,
 		},
 		data: () => {
@@ -49,7 +45,7 @@
 						{
 							id: 2,
 							title: 'Services',
-							details: 'UI Design & Frontend Development',
+							details: 'Frontend Development',
 						},
 						{
 							id: 3,
@@ -59,7 +55,7 @@
 						{
 							id: 4,
 							title: 'Phone',
-							details: '555 8888 888',
+							details: '+234 808 294 5975',
 						},
 					],
 					objectivesHeading: 'Objective',
@@ -74,7 +70,6 @@
 								'JavaScript',
 								'Vue.js',
 								'TailwindCSS',
-								'AdobeXD',
 							],
 						},
 					],
@@ -165,15 +160,10 @@
 		<!-- Project header -->
 		<ProjectHeader :singleProjectHeader="singleProjectHeader" />
 
-		<!-- Project gallery -->
-		<ProjectGallery :projectImages="projectImages" />
-
-		<!-- Project information -->
-		<ProjectInfo :projectInfo="projectInfo" />
-
 		<!-- Project related projects -->
 		<ProjectRelatedProjects :relatedProject="relatedProject" />
 	</div>
 </template>
 
 <style scoped></style>
+

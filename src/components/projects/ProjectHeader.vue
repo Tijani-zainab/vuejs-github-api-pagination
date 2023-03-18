@@ -1,7 +1,7 @@
 <script>
-export default {
-	props: ['singleProjectHeader'],
-};
+	export default {
+		props: ['singleProjectHeader'],
+	};
 </script>
 
 <template>

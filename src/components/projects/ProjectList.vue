@@ -40,7 +40,7 @@
             <p class="text-gray-700 mb-2">{{ repo.description }}</p>
             <p class="text-gray-700 mb-2">Language: {{ repo.language }}</p>
             <p class="text-gray-700 mb-2">Stars: {{ repo.stargazers_count }}</p>
-            <a :href="repo.html_url" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700 transition-colors duration-300">View on GitHub</a>
+            <a :href="repo.html_url" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700 transition-colors duration-300">Project Details</a>
           </div>
         </div>
 
