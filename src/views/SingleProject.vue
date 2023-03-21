@@ -2,6 +2,7 @@
 	import feather from 'feather-icons';
 	import ProjectHeader from '../components/projects/ProjectHeader.vue';
 	import ProjectInfo from '../components/projects/ProjectInfo.vue';
+	// import ProjectDetail from '../components/projects/ProjectDetail.vue';
 	import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects.vue';
 
 	export default {
@@ -9,6 +10,7 @@
 		name: 'Projects',
 		components: {
 			ProjectHeader,
+			// ProjectDetail,
 			ProjectInfo,
 			ProjectRelatedProjects,
 		},
@@ -72,7 +74,6 @@
 								'JavaScript',
 								'Vue.js',
 								'TailwindCSS',
-								'AdobeXD',
 							],
 						},
 					],
@@ -162,6 +163,9 @@
 	<div class="container mx-auto mt-10 sm:mt-20">
 		<!-- Project header -->
 		<ProjectHeader :singleProjectHeader="singleProjectHeader" />
+
+		<!-- Project details -->
+		<!-- <ProjectDetail :projectDetail="projectDetail" /> -->
 
 		<!-- Project information -->
 		<ProjectInfo :projectInfo="projectInfo" />
