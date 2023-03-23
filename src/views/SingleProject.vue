@@ -2,6 +2,7 @@
 	import feather from 'feather-icons';
 	import ProjectHeader from '../components/projects/ProjectHeader.vue';
 	import ProjectInfo from '../components/projects/ProjectInfo.vue';
+	import ProjectSingle from '../components/projects/ProjectSingle.vue';
 	// import ProjectDetail from '../components/projects/ProjectDetail.vue';
 	import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects.vue';
 
@@ -11,6 +12,7 @@
 		components: {
 			ProjectHeader,
 			// ProjectDetail,
+			ProjectSingle,
 			ProjectInfo,
 			ProjectRelatedProjects,
 		},
@@ -163,6 +165,8 @@
 	<div class="container mx-auto mt-10 sm:mt-20">
 		<!-- Project header -->
 		<ProjectHeader :singleProjectHeader="singleProjectHeader" />
+
+		<ProjectSingle :singleProject="singleProject" />
 
 		<!-- Project details -->
 		<!-- <ProjectDetail :projectDetail="projectDetail" /> -->

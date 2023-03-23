@@ -1,7 +1,6 @@
 <script>
 	import feather from 'feather-icons';
 	import ProjectsFilter from './ProjectsFilter.vue';
-	// import ProjectSingle from './ProjectSingle.vue';
 	import ProjectList from './ProjectList.vue';
 
 	export default {
@@ -11,6 +10,7 @@
 				projectsHeading: 'Projects Portfolio',
 				selectedCategory: '',
 				searchProject: '',
+				
 			};
 		},
 		computed: {
