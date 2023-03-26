@@ -71,9 +71,6 @@ const router = createRouter({
 	
 	// move this inside createRouter()
 	beforeEach(to, from, next) {
-		// This goes through the matched routes from last to first, finding the closest route with a title.
-		// e.g., if we have `/some/deep/nested/route` and `/some`, `/deep`, and `/nested` have titles,
-		// `/nested`'s will be chosen.
 		const nearestWithTitle = to.matched
 			.slice()
 			.reverse()
